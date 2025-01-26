@@ -4,7 +4,7 @@ import numpy as np
 from astropy.table import Table
 from astropy.io import fits
 import lightkurve as lk
-from coord2power.utils import create_coord_string, save_lightcurves, download_lightcurves
+from coord2power.utils import create_coord_string, save_lightcurves, download_lightcurves, query_gaia
 
 # Define base directory for the project
 BASE_DIR = '/Users/creyes/Projects/harps'
@@ -31,7 +31,10 @@ def main():
         except Exception as e:
             print(f"Error for {row['target_name']}: {e}")
     
-    # Step 2: Process lightcurve tables
+    # Step 2: Query Gaia DR3 and compute additional parameters
+    df = query_gaia(df, TABLE_DIR)
+
+    # Step 3: Process lightcurve tables
     mission_list, nobs, tables = [], [], []
     for _, row in df.iterrows():
         table_path = os.path.join(TABLE_DIR, f"{row['target_name']}.ecsv")
@@ -59,7 +62,7 @@ def main():
     # Save updated DataFrame as a pickle
     df.to_pickle(os.path.join(TABLE_DIR, 'updated_dataframe.pkl'))
 
-    # Step 3: Download lightcurves
+    # Step 4: Download lightcurves
     df_with_tables = df[df['number_of_lightcurves'] > 0]
     for _, row in df_with_tables.iterrows():
         save_lightcurves(row['tables'], row['target_name'], LC_DIR)
