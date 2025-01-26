@@ -6,9 +6,6 @@ import numpy as numpy
 
 base_dir = '/Users/creyes/Projects/tables
 
-
-
-
 df['coord_string'] = [ "{:.8f}".format(a) + ' ' + "{:.8f}".format(b) for a,b in zip(df['alpha'], df['delta'])]
 
 for _, coords in df.iterrows():
