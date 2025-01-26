@@ -4,7 +4,7 @@ import numpy as np
 from astropy.table import Table
 from astropy.io import fits
 import lightkurve as lk
-from coord2power.utils import create_coord_string, save_lightcurves, download_lightcurves, query_gaia
+from coord2light.utils import create_coord_string, save_lightcurves, download_lightcurves, query_gaia
 
 # Define base directory for the project
 BASE_DIR = '/Users/creyes/Projects/harps'
