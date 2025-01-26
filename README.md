@@ -1,6 +1,6 @@
 # Coord2Light
 
-=== Stil testing this ===
+=== Stil testing this project NOT READY ===
 
 Coord2Light is a Python pipeline that transforms celestial coordinates into lightcurves and power spectra using the `lightkurve` package and NASA's MAST archive.
 
