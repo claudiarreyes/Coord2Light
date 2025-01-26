@@ -20,9 +20,9 @@ Coord2Power is a Python pipeline that transforms celestial coordinates into ligh
 ## Usage
 1. Prepare a CSV file containing the following columns:
 
-   * target_name: Name of the target
-   * alpha: Right Ascension (degrees)
-   * delta: Declination (degrees)
+* target_name: Name of the target
+* alpha: Right Ascension (degrees)
+* delta: Declination (degrees)
 
 2. Run the pipeline:
    ```
