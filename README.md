@@ -5,6 +5,8 @@ Coord2Power is a Python pipeline that transforms celestial coordinates into ligh
 ## Features
 - Search and download lightcurve tables based on celestial coordinates.
 - Automatically classify and save science lightcurves (`type='S'`).
+- Query Gaia DR3 for the closest matches to target coordinates.
+- Automatically compute distance modulus (DM) and estimated absolute G magnitude (`abs_gmag_estimated`).
 - Store metadata and downloaded lightcurves in an organized structure.
 
 ## Installation
