@@ -13,3 +13,6 @@ Coord2Power is a Python pipeline that transforms celestial coordinates into ligh
    git clone https://github.com/yourusername/Coord2Power.git
    cd Coord2Power
 
+2. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
