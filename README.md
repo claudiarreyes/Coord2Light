@@ -1,6 +1,6 @@
-# Coord2Power
+# Coord2Light
 
-Coord2Power is a Python pipeline that transforms celestial coordinates into lightcurves and power spectra using the `lightkurve` package and NASA's MAST archive.
+Coord2Light is a Python pipeline that transforms celestial coordinates into lightcurves and power spectra using the `lightkurve` package and NASA's MAST archive.
 
 ## Features
 - Search and download lightcurve tables based on celestial coordinates.
@@ -12,8 +12,8 @@ Coord2Power is a Python pipeline that transforms celestial coordinates into ligh
 ## Installation
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/Coord2Power.git
-   cd Coord2Power
+   git clone https://github.com/yourusername/Coord2Light.git
+   cd Coord2Light
    ```
 2. Install required dependencies:
    ```
@@ -28,7 +28,7 @@ Coord2Power is a Python pipeline that transforms celestial coordinates into ligh
 
 2. Run the pipeline:
    ```
-   python coord2power/main.py
+   python coord2light/main.py
    ````
 3. Output:
 
